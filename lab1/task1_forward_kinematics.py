@@ -22,7 +22,6 @@ def part2_one_pose(viewer, bvh_file_path):
     viewer.show_pose(joint_name, joint_positions, joint_orientations)
     viewer.run()
 
-
 def part2_animation(viewer, bvh_file_path):
     """
     播放完整bvh
@@ -71,11 +70,11 @@ def part3_retarget(viewer, T_pose_bvh_path, A_pose_bvh_path):
 def main():
     # create a viewer
     viewer = SimpleViewer()
-    bvh_file_path = "data/walk60.bvh"
+    bvh_file_path = "data/A_pose_run.bvh"
 
     # 请取消注释需要运行的代码
     # part1
-    part1(viewer, bvh_file_path)
+    # part1(viewer, bvh_file_path)
 
     # part2
     # part2_one_pose(viewer, bvh_file_path)

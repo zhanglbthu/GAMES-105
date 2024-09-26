@@ -140,6 +140,8 @@ def part2_inverse_kinematics(meta_data, joint_positions, joint_orientations, rel
     """
     输入lWrist相对于RootJoint前进方向的xz偏移，以及目标高度，IK以外的部分与bvh一致
     """
+    target_pos = np.array([joint_positions[0][0] + relative_x, target_height, joint_positions[0][2] + relative_z])
+    joint_positions, joint_orientations = part1_inverse_kinematics(meta_data, joint_positions, joint_orientations, target_pos)
     
     return joint_positions, joint_orientations
 
